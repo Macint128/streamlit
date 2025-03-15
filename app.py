@@ -1,6 +1,7 @@
 import streamlit as st
 
 st.title('안녕')
+st.button()
 st.markdown(
     """
     <style>
