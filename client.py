@@ -3,7 +3,7 @@ import asyncio
 import websockets
 import json
 
-server_url = "ws://localhost:8000/ws/"
+server_url = "wss://your-app.onrender.com/ws/"
 
 st.title("멀티플레이어 플래피버드")
 
