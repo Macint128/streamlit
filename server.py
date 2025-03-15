@@ -29,3 +29,4 @@ async def websocket_endpoint(websocket: WebSocket, player_name: str):
 
     except WebSocketDisconnect:
         del players[player_name]
+
