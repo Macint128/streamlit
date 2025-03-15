@@ -1,7 +1,12 @@
 import streamlit as st
 
-st.title("안녕")
-st.write("이건 간단한 웹패이지야.")
+st.title("카운터 버튼")
 
-if st.button("버튼을 눌러보세요!"):
-    st.write("버튼이 눌렸어요!")
+# 세션 상태를 활용해 버튼을 누를 때마다 값이 증가하도록 설정
+if "count" not in st.session_state:
+    st.session_state.count = 0
+
+if st.button("카운터 증가"):
+    st.session_state.count += 1
+
+st.write(f"현재 카운트: {st.session_state.count}")
