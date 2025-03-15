@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.title("반가워")
+st.title("인녕")
