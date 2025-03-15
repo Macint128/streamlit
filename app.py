@@ -22,6 +22,12 @@ if uploaded_file:
     audio = AudioSegment.from_file(uploaded_file)
     st.audio(uploaded_file, format="audio/wav")
 
+     try:
+        audio = AudioSegment.from_file(uploaded_file)  # 파일 로드
+        st.audio(uploaded_file, format="audio/wav")
+    except Exception as e:
+        st.error(f"파일을 처리하는 도중 오류가 발생했습니다: {e}")
+
     # 가상 피아노 UI 만들기
     st.markdown("### 🎼 피아노 건반을 클릭해보세요!")
 
