@@ -1,12 +1,21 @@
-import streamlit as st
+st.markdown(
+    """
+    <style>
+    div.stButton > button:first-child {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 24px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #45a049;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-st.title("카운터 버튼")
-
-# 세션 상태를 활용해 버튼을 누를 때마다 값이 증가하도록 설정
-if "count" not in st.session_state:
-    st.session_state.count = 0
-
-if st.button("카운터 증가"):
-    st.session_state.count += 1
-
-st.write(f"현재 카운트: {st.session_state.count}")
+if st.button("스타일 변경된 버튼"):
+    st.write("버튼을 눌렀습니다!")
