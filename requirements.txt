@@ -1,3 +1,4 @@
 streamlit
-pydub
 numpy
+sympy
+matplotlib
