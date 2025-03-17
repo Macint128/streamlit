@@ -1,4 +1,1 @@
 streamlit
-numpy
-sympy
-matplotlib
